@@ -1,0 +1,60 @@
+{
+  "user_profile": {
+    "user_id": "ABHAY_99X",
+    "full_name": "Abhay Singh",
+    "account_tier": "Premium",
+    "primary_iban": "DE89 3704 0044 0532 0130 00"
+  },
+  "accounts": [
+    {
+      "type": "Checking",
+      "currency": "EUR",
+      "balance": 4520.5,
+      "status": "Active"
+    },
+    {
+      "type": "Savings",
+      "currency": "EUR",
+      "balance": 12000.0,
+      "interest_rate": "2.5%"
+    }
+  ],
+  "recent_transactions": [
+    {
+      "date": "2026-01-08",
+      "merchant": "Rewe Supermarket",
+      "amount": -45.2,
+      "category": "Groceries"
+    },
+    {
+      "date": "2026-01-07",
+      "merchant": "Spotify Premium",
+      "amount": -12.99,
+      "category": "Subscription"
+    },
+    {
+      "date": "2026-01-06",
+      "merchant": "Deutsche Bahn",
+      "amount": -89.5,
+      "category": "Transport"
+    },
+    {
+      "date": "2026-01-05",
+      "merchant": "Salary Deposit",
+      "amount": 3200.0,
+      "category": "Income"
+    },
+    {
+      "date": "2026-01-04",
+      "merchant": "City Pharmacy",
+      "amount": -22.4,
+      "category": "Health"
+    },
+    {
+      "date": "2026-01-02",
+      "merchant": "Apple Store",
+      "amount": -1299.0,
+      "category": "Electronics"
+    }
+  ]
+}
