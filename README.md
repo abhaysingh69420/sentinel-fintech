@@ -1,36 +1,41 @@
-# 🛡️ Sentinel: Privacy-First Hybrid AI Router
+# 🛡️ Sentinel: Privacy-First AI Architecture for Fintech
 
-![License](https://img.shields.io/badge/license-MIT-green) ![Python](https://img.shields.io/badge/python-3.9%2B-blue) ![Status](https://img.shields.io/badge/status-prototype-orange)
+<div align="center">
 
-**A Proof-of-Concept architecture for Fintech that solves the "Privacy vs. Intelligence" deadlock.**
+![Status](https://img.shields.io/badge/Status-Prototype_v1.0-success?style=for-the-badge)
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-orange?style=for-the-badge)
+![Focus](https://img.shields.io/badge/Focus-Privacy_%26_Sovereignty-red?style=for-the-badge)
 
-Sentinel is a **Semantic Smart Router** that sits between the user and the LLM. It analyzes user intent in real-time (200ms) and dynamically routes queries:
-1.  **Sensitive Data (Balance, Transactions)** → Processed **Locally** by Llama 3.2 (Zero Data Leakage).
-2.  **General Knowledge (Market Trends, Advice)** → Processed by **Gemini Cloud** (High Intelligence).
+**The "Smart Router" that bridges the gap between Secure Local LLMs and SOTA Cloud Intelligence.**
 
----
+[**🌐 Live Product Page**](https://abhaysingh69420.github.io/sentinel-fintech/) | [**📄 Read the Paper**](#) | [**🐛 Report Bug**](https://github.com/abhaysingh69420/sentinel-fintech/issues)
 
-## 🚀 Key Features
-*   **Semantic Routing:** Uses `all-MiniLM-L6-v2` vector embeddings (not just keywords) to understand context.
-*   **Privacy Firewall:** PII and Banking JSON data *never* leave the local environment.
-*   **Frugal Architecture:** Reduces API costs by ~60% by offloading simple queries to the local CPU.
-*   **Fail-Safe UI:** Explicit "Green Shield" signaling builds user trust.
-
-## 🛠️ Tech Stack
-*   **Frontend:** Streamlit (Python)
-*   **Local Brain:** Ollama (Llama 3.2 3B)
-*   **Cloud Brain:** Google Gemini 2.5 Flash
-*   **Router Logic:** Sentence-Transformers (HuggingFace)
+</div>
 
 ---
 
-## 💻 Installation Guide
+## 🧐 The Problem
+Financial institutions face a deadlock:
+*   **Cloud AI (GPT-4/Gemini)** is smart but **unsafe** for banking data (GDPR/PII risks).
+*   **Local AI (Chatbots)** is private but **dumb** (lacks world knowledge).
 
-### Prerequisites
-1.  **Python 3.9+** installed.
-2.  **Ollama** installed and running ([Download Here](https://ollama.com)).
+## 💡 The Sentinel Solution
+Sentinel introduces a **Semantic Firewall**. It sits between the user and the AI, routing queries based on *intent* rather than keywords.
 
-### Step 1: Clone the Repository
-```bash
-git clone https://github.com/abhaysingh69420/sentinel-fintech.git
-cd sentinel-fintech
+### System Architecture
+```mermaid
+graph TD
+    User[👤 User Query] --> Router{🛡️ Sentinel Router}
+    
+    subgraph "Secure Local Environment"
+    Router -- "Sensitive (Balance/Tx)" --> LocalLLM[🦙 Llama 3.2 (Local)]
+    LocalLLM <--> Database[(📂 Encrypted JSON)]
+    end
+    
+    subgraph "Public Cloud Environment"
+    Router -- "General (Market/News)" --> CloudLLM[☁️ Gemini 2.5 Flash]
+    end
+    
+    LocalLLM --> UI[🖥️ Streamlit Interface]
+    CloudLLM --> UI
