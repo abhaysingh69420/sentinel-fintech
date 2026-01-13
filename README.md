@@ -32,5 +32,5 @@ Sentinel is a **Semantic Smart Router** that sits between the user and the LLM. 
 
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/YOUR_USERNAME/sentinel-fintech.git
+git clone https://github.com/abhaysingh69420/sentinel-fintech.git
 cd sentinel-fintech
