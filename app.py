@@ -1,3 +1,4 @@
+import pandas as pd
 import streamlit as st
 import json
 import time
@@ -39,28 +40,6 @@ def load_router():
 
 router = load_router()
 
-# --- SIDEBAR ---
-with st.sidebar:
-    st.image("https://img.icons8.com/3d-fluency/94/shield.png", width=50)
-    st.title("Sentinel Core")
-    st.caption("v1.0.0-Prototype")
-    
-    st.divider()
-    
-    st.subheader("📂 Secure Data Vault")
-    st.info("Status: ENCRYPTED (Local)")
-    
-    try:
-        with open('user_data.json', 'r') as f:
-            user_data = json.load(f)
-        st.json(user_data, expanded=False)
-    except:
-        st.error("Vault Empty")
-        user_data = {}
-        
-    st.divider()
-    st.caption("© 2026 Abhay Singh | Research Prototype")
-
 # --- MAIN INTERFACE ---
 col1, col2 = st.columns([3, 1])
 with col1:
@@ -82,6 +61,51 @@ with st.expander("ℹ️ How Sentinel Protects You"):
 
 st.divider()
 
+# --- SIDEBAR: SECURE DATA VAULT ---
+with st.sidebar:
+    st.image("https://img.icons8.com/3d-fluency/94/shield.png", width=50)
+    st.title("Sentinel Core")
+    st.caption("v1.0.0-Prototype | Encrypted")
+    
+    st.divider()
+    
+    # LOAD DATA
+    try:
+        with open('user_data.json', 'r') as f:
+            user_data = json.load(f)
+        
+        # 1. Profile Card
+        profile = user_data['user_profile']
+        st.write(f"**User:** {profile['full_name']}")
+        st.write(f"**IBAN:** `{profile['iban']}`")
+        st.metric("Current Balance", f"€{profile['current_balance']:,.2f}")
+        
+        st.divider()
+        
+        # 2. Transaction Grid (The "Extensive" Look)
+        st.subheader("Recent Activity")
+        transactions = user_data.get('recent_transactions', [])
+        
+        if transactions:
+            # Convert to Pandas DataFrame for a pretty table
+            df = pd.DataFrame(transactions)
+            # Show a scrollable, sortable table
+            st.dataframe(
+                df[['date', 'merchant', 'amount']], 
+                hide_index=True, 
+                height=300, 
+                use_container_width=True
+            )
+        else:
+            st.info("No transactions found.")
+
+    except Exception as e:
+        st.error(f"Vault Locked or Empty: {e}")
+        user_data = {}
+        
+    st.divider()
+    st.caption("© 2026 Abhay Pratap Singh | Research Prototype")
+
 # Chat Logic
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -99,15 +123,32 @@ if prompt := st.chat_input("Ask about transactions, balances, or general topics.
         st.markdown(prompt)
 
     # ROUTING
+    # ... inside the "if prompt :=" block ...
+
+    # 0. GET CONTEXT (Previous User Message)
+    previous_query = None
+    # We look back 2 steps in history to find the last thing the USER said
+    if len(st.session_state.messages) >= 2:
+        # The history looks like: [User, AI, User, AI...]
+        # So the last user message is usually at index -2 (before the current append)
+        # But since we JUST appended the current prompt, we need to look deeper or track it manually.
+        # A simpler way: Look for the last message with role='user' that isn't the current one.
+        user_msgs = [m['content'] for m in st.session_state.messages if m['role'] == 'user']
+        if len(user_msgs) > 1:
+            previous_query = user_msgs[-2] # The one before the current one
+
+    # ROUTING
     with st.status("🧠 Sentinel Neural Engine processing...", expanded=True) as status:
         start_time = time.time()
-        route_result = router.route_query(prompt)
+        
+        # *** KEY CHANGE: PASS PREVIOUS QUERY ***
+        route_result = router.route_query(prompt, previous_query=previous_query)
+        
         decision = route_result['decision']
         score = route_result['similarity_score']
         latency = (time.time() - start_time) * 1000
         
         status.update(label=f"Routing Complete: {decision} ({latency:.0f}ms)", state="complete", expanded=False)
-
     # BRANCH 1: LOCAL
     if "LOCAL" in decision:
         with st.chat_message("assistant", avatar="🛡️"):

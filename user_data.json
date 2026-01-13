@@ -1,60 +1,496 @@
 {
   "user_profile": {
-    "user_id": "ABHAY_99X",
+    "user_id": "SENTINEL_USER_001",
     "full_name": "Abhay Singh",
-    "account_tier": "Premium",
-    "primary_iban": "DE89 3704 0044 0532 0130 00"
+    "account_type": "Platinum Business",
+    "iban": "DE89 1001 0010 0559 1920 00",
+    "current_balance": 20210.42
   },
-  "accounts": [
-    {
-      "type": "Checking",
-      "currency": "EUR",
-      "balance": 4520.5,
-      "status": "Active"
-    },
-    {
-      "type": "Savings",
-      "currency": "EUR",
-      "balance": 12000.0,
-      "interest_rate": "2.5%"
-    }
-  ],
+  "financial_summary": {
+    "total_income_ytd": 9600.0,
+    "total_spend_ytd": 4230.5,
+    "credit_score": 785
+  },
   "recent_transactions": [
     {
-      "date": "2026-01-08",
-      "merchant": "Rewe Supermarket",
-      "amount": -45.2,
-      "category": "Groceries"
-    },
-    {
-      "date": "2026-01-07",
-      "merchant": "Spotify Premium",
-      "amount": -12.99,
-      "category": "Subscription"
-    },
-    {
-      "date": "2026-01-06",
-      "merchant": "Deutsche Bahn",
-      "amount": -89.5,
-      "category": "Transport"
-    },
-    {
-      "date": "2026-01-05",
-      "merchant": "Salary Deposit",
+      "id": "TXN-61674",
+      "date": "2025-12-29",
+      "merchant": "TechCorp Solutions GmbH - Salary",
+      "category": "Income",
       "amount": 3200.0,
-      "category": "Income"
+      "currency": "EUR"
     },
     {
-      "date": "2026-01-04",
-      "merchant": "City Pharmacy",
-      "amount": -22.4,
-      "category": "Health"
+      "id": "TXN-76505",
+      "date": "2025-12-29",
+      "merchant": "Uber Trip",
+      "category": "Transport",
+      "amount": -92.81,
+      "currency": "EUR"
     },
     {
-      "date": "2026-01-02",
+      "id": "TXN-54511",
+      "date": "2025-12-28",
+      "merchant": "Shell Station",
+      "category": "Transport",
+      "amount": -41.55,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-14158",
+      "date": "2025-12-24",
+      "merchant": "MediaMarkt",
+      "category": "Tech",
+      "amount": -155.36,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-30895",
+      "date": "2025-12-24",
+      "merchant": "Lidl Berlin",
+      "category": "Groceries",
+      "amount": -106.28,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-43877",
+      "date": "2025-12-24",
+      "merchant": "Netflix 4K",
+      "category": "Subscriptions",
+      "amount": -133.74,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-85057",
+      "date": "2025-12-24",
+      "merchant": "Lufthansa",
+      "category": "Transport",
+      "amount": -96.29,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-26715",
+      "date": "2025-12-23",
+      "merchant": "Lufthansa",
+      "category": "Transport",
+      "amount": -142.52,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-73597",
+      "date": "2025-12-21",
+      "merchant": "City Apotheke",
+      "category": "Health",
+      "amount": -112.66,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-37336",
+      "date": "2025-12-19",
+      "merchant": "Uber Trip",
+      "category": "Transport",
+      "amount": -30.57,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-89721",
+      "date": "2025-12-19",
+      "merchant": "Spotify Premium",
+      "category": "Subscriptions",
+      "amount": -52.34,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-86524",
+      "date": "2025-12-17",
+      "merchant": "Saturn",
+      "category": "Tech",
+      "amount": -260.59,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-75693",
+      "date": "2025-12-16",
+      "merchant": "Vapiano",
+      "category": "Dining",
+      "amount": -144.4,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-72721",
+      "date": "2025-12-12",
+      "merchant": "Vapiano",
+      "category": "Dining",
+      "amount": -16.17,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-18924",
+      "date": "2025-12-11",
       "merchant": "Apple Store",
-      "amount": -1299.0,
-      "category": "Electronics"
+      "category": "Tech",
+      "amount": -62.51,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-89246",
+      "date": "2025-12-10",
+      "merchant": "TechCorp Solutions GmbH - Salary",
+      "category": "Income",
+      "amount": 3200.0,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-23120",
+      "date": "2025-12-07",
+      "merchant": "MediaMarkt",
+      "category": "Tech",
+      "amount": -105.04,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-78427",
+      "date": "2025-12-05",
+      "merchant": "Netflix 4K",
+      "category": "Subscriptions",
+      "amount": -102.0,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-17710",
+      "date": "2025-12-03",
+      "merchant": "Netflix 4K",
+      "category": "Subscriptions",
+      "amount": -127.31,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-95501",
+      "date": "2025-12-02",
+      "merchant": "Uber Eats",
+      "category": "Dining",
+      "amount": -117.51,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-83974",
+      "date": "2025-11-30",
+      "merchant": "AWS EMEA",
+      "category": "Tech",
+      "amount": -179.92,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-25619",
+      "date": "2025-11-29",
+      "merchant": "Netflix 4K",
+      "category": "Subscriptions",
+      "amount": -79.7,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-26897",
+      "date": "2025-11-28",
+      "merchant": "Notion AI",
+      "category": "Subscriptions",
+      "amount": -71.47,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-74688",
+      "date": "2025-11-28",
+      "merchant": "Local Cafe",
+      "category": "Dining",
+      "amount": -30.16,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-57929",
+      "date": "2025-11-25",
+      "merchant": "Notion AI",
+      "category": "Subscriptions",
+      "amount": -132.73,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-89947",
+      "date": "2025-11-22",
+      "merchant": "MediaMarkt",
+      "category": "Tech",
+      "amount": -304.32,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-20964",
+      "date": "2025-11-20",
+      "merchant": "Vapiano",
+      "category": "Dining",
+      "amount": -95.53,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-78550",
+      "date": "2025-11-17",
+      "merchant": "Apple Store",
+      "category": "Tech",
+      "amount": -375.43,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-13313",
+      "date": "2025-11-17",
+      "merchant": "Deutsche Bahn",
+      "category": "Transport",
+      "amount": -19.28,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-30466",
+      "date": "2025-11-14",
+      "merchant": "City Apotheke",
+      "category": "Health",
+      "amount": -49.63,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-19761",
+      "date": "2025-11-13",
+      "merchant": "TechCorp Solutions GmbH - Salary",
+      "category": "Income",
+      "amount": 3200.0,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-93846",
+      "date": "2025-11-12",
+      "merchant": "Deutsche Bahn",
+      "category": "Transport",
+      "amount": -149.05,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-68578",
+      "date": "2025-11-12",
+      "merchant": "Uber Eats",
+      "category": "Dining",
+      "amount": -53.52,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-84003",
+      "date": "2025-11-09",
+      "merchant": "Lidl Berlin",
+      "category": "Groceries",
+      "amount": -34.81,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-74896",
+      "date": "2025-11-06",
+      "merchant": "Gymshark",
+      "category": "Health",
+      "amount": -121.55,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-16721",
+      "date": "2025-11-05",
+      "merchant": "Uber Trip",
+      "category": "Transport",
+      "amount": -67.41,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-13623",
+      "date": "2025-11-04",
+      "merchant": "City Apotheke",
+      "category": "Health",
+      "amount": -35.46,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-10148",
+      "date": "2025-11-02",
+      "merchant": "Notion AI",
+      "category": "Subscriptions",
+      "amount": -24.29,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-97922",
+      "date": "2025-10-31",
+      "merchant": "Vapiano",
+      "category": "Dining",
+      "amount": -136.92,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-42149",
+      "date": "2025-10-29",
+      "merchant": "Apple Store",
+      "category": "Tech",
+      "amount": -651.8,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-23076",
+      "date": "2025-10-29",
+      "merchant": "Saturn",
+      "category": "Tech",
+      "amount": -223.61,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-74753",
+      "date": "2025-10-26",
+      "merchant": "Uber Eats",
+      "category": "Dining",
+      "amount": -24.35,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-22479",
+      "date": "2025-10-26",
+      "merchant": "Shell Station",
+      "category": "Transport",
+      "amount": -126.37,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-20560",
+      "date": "2025-10-26",
+      "merchant": "Lidl Berlin",
+      "category": "Groceries",
+      "amount": -112.28,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-76898",
+      "date": "2025-10-25",
+      "merchant": "Notion AI",
+      "category": "Subscriptions",
+      "amount": -124.88,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-73544",
+      "date": "2025-10-22",
+      "merchant": "TechCorp Solutions GmbH - Salary",
+      "category": "Income",
+      "amount": 3200.0,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-29718",
+      "date": "2025-10-21",
+      "merchant": "Saturn",
+      "category": "Tech",
+      "amount": -345.98,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-65169",
+      "date": "2025-10-17",
+      "merchant": "Spotify Premium",
+      "category": "Subscriptions",
+      "amount": -27.51,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-93539",
+      "date": "2025-10-14",
+      "merchant": "Starbucks",
+      "category": "Dining",
+      "amount": -111.04,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-72114",
+      "date": "2025-10-12",
+      "merchant": "City Apotheke",
+      "category": "Health",
+      "amount": -44.74,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-32151",
+      "date": "2025-10-12",
+      "merchant": "Aldi S\u00fcd",
+      "category": "Groceries",
+      "amount": -107.77,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-88604",
+      "date": "2025-10-11",
+      "merchant": "Saturn",
+      "category": "Tech",
+      "amount": -633.37,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-76424",
+      "date": "2025-10-08",
+      "merchant": "Rewe City",
+      "category": "Groceries",
+      "amount": -48.29,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-55032",
+      "date": "2025-10-07",
+      "merchant": "Lufthansa",
+      "category": "Transport",
+      "amount": -131.25,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-10694",
+      "date": "2025-10-04",
+      "merchant": "Aldi S\u00fcd",
+      "category": "Groceries",
+      "amount": -131.0,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-54774",
+      "date": "2025-10-03",
+      "merchant": "ChatGPT Plus",
+      "category": "Subscriptions",
+      "amount": -51.7,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-51709",
+      "date": "2025-09-30",
+      "merchant": "Notion AI",
+      "category": "Subscriptions",
+      "amount": -123.85,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-86913",
+      "date": "2025-09-28",
+      "merchant": "City Apotheke",
+      "category": "Health",
+      "amount": -113.92,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-82989",
+      "date": "2025-09-25",
+      "merchant": "Lufthansa",
+      "category": "Transport",
+      "amount": -89.21,
+      "currency": "EUR"
+    },
+    {
+      "id": "TXN-73296",
+      "date": "2025-09-24",
+      "merchant": "Vapiano",
+      "category": "Dining",
+      "amount": -6.33,
+      "currency": "EUR"
     }
   ]
 }
