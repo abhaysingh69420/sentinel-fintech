@@ -26,16 +26,16 @@ Sentinel introduces a **Semantic Firewall**. It sits between the user and the AI
 ### System Architecture
 ```mermaid
 graph TD
-    User[👤 User Query] --> Router{🛡️ Sentinel Router}
+    User(["👤 User Query"]) --> Router{"🧠 Semantic Router"}
     
-    subgraph "Secure Local Environment"
-    Router -- "Sensitive (Balance/Tx)" --> LocalLLM[🦙 Llama 3.2 (Local)]
-    LocalLLM <--> Database[(📂 Encrypted JSON)]
+    subgraph "Local Secure Zone (Offline)"
+    Router -- "Sensitive Data" --> Local["🦙 Llama 3.2 (Local)"]
+    Database[("📂 Encrypted JSON")] -.-> Local
     end
     
-    subgraph "Public Cloud Environment"
-    Router -- "General (Market/News)" --> CloudLLM[☁️ Gemini 2.5 Flash]
+    subgraph "Public Cloud Zone (TLS Encrypted)"
+    Router -- "General Knowledge" --> Cloud["☁️ Gemini 2.5 Flash"]
     end
     
-    LocalLLM --> UI[🖥️ Streamlit Interface]
-    CloudLLM --> UI
+    Local --> UI["🖥️ Sentinel Interface"]
+    Cloud --> UI
