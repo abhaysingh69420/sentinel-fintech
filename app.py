@@ -8,7 +8,7 @@ from router import PrivacyRouter
 
 # --- CONFIGURATION ---
 # PASTE YOUR KEY HERE (Keep your existing key!)
-GOOGLE_API_KEY = "AIzaSyBE3U4YIjLUXGWPwMD__ahwuGFUVHlZlSQ" 
+GOOGLE_API_KEY = "Api key" 
 
 # Configure Gemini
 try:
