@@ -39,7 +39,7 @@ graph TD
     end
     
     subgraph "Public Cloud Zone (TLS Encrypted)"
-    Router -- "General Knowledge" --> Cloud["☁️ Gemini 2.5 Flash"]
+    Router -- "General Knowledge" --> Cloud["☁️ Gemini 2.5 Pro"]
     end
     
     Local --> UI["🖥️ Sentinel Interface"]
